@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<form method="POST"
+enctype="multipart/form-data">
+  <h3 align="center">Upload Image</h3>
+  <div style='margin-top : 100px'>
+    <form
+      action="http://jkorpela.fi/cgi-bin/echo.cgi"
+      enctype="multipart/form-data"
+      method="POST"
+    >
+      <p>
+        <h4>Specify the Image:</h4>
+        <br />
+        <input type="file" name="datafile" id="datafile" value="datafile" accept="image'png" size="80" />
+      </p>
+      <div>
+        <input type="submit" class="btn btn-primary" value="Upload" />
+      </div>
+    </form>
+  </div>
+</form>
+{% endblock %}

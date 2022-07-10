@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% block title %}Report{% endblock %}
+
+{% block content %} 
+
+<h1 align='center'>Report</h1>
+<div style='margin-top:30px'>
+<body>
+    <p>
+        <b>STATUS</b> : {{STATUS}}
+    </p>
+    <p>
+        <b>THICNESS</b> : {{Cornea_thickness}} px
+    </p>
+    <p>
+        <b>CURVATURE</b> : {{Curvature_angle}} degrees
+    </p>
+    <p style="padding: 10px;" >
+        <img src="{{ url_for('static', filename='original.jpg') }}" alt="oringinal image" width="500" height="500" title="original" style="padding: 10px;">
+        <img src="{{ url_for('static', filename='hist.jpg') }}" alt="histagram equalised" width="500" height="500" title="histagram equalised" style="padding: 10px;" >
+        
+    </p>
+    <p style="padding: 10px;">
+        <img src="{{ url_for('static', filename='segmented.jpg') }}" alt="segmented" width="500" height="500" title="segmented" style="padding: 10px;">
+        <img src="{{ url_for('static', filename='contours.jpg') }}" alt="contours" width="500" height="500" title="contours" style="padding: 10px;">
+    </p>   
+</body>
+</div>
+
+{% endblock %}
